@@ -39,7 +39,7 @@ int main()
             cout << "You went north." << endl;
             coordinate_y++;
             cout << events[arrayChooser].getDescription() << endl;
-            lives -= events[arrayChooser].getLivesIncr();
+            lives -= events[arrayChooser].getHealthIncr();
         }
         if (direction == "west")
         {
