@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <time.h>
+#include <vector>;
+#include "GameEvent.h"
 
 using namespace std;
 
@@ -12,7 +14,16 @@ int main()
     int coordinate_x = 0;
     string direction;
     int arrayChooser = rand() % 2;
-    string events[2] {"You find 100 gold", "You get 1 life"};
+    
+    std::vector<GameEvents> events(3);
+
+    // Initial events vector
+    events[0] = new GameEvents("You find 100 gold", 100, 0);
+    events[1] = new GameEvents("You get 1 life", 0, 1);
+    events[2] = new GameEvents("You find 80 gold but lost 3 lives", 80, -3);
+ 
+
+    //string events[2] {"You find 100 gold", "You get 1 life"};
 
 
     cout << "Welcome to Dinky Island\n" << endl;
@@ -27,7 +38,8 @@ int main()
         {
             cout << "You went north." << endl;
             coordinate_y++;
-            cout << events[arrayChooser] << endl;
+            cout << events[arrayChooser].getDescription() << endl;
+            lives -= events[arrayChooser].getLivesIncr();
         }
         if (direction == "west")
         {
