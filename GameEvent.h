@@ -13,6 +13,21 @@ class GameEvent
             moneyIncr = _moneyIncr;
             healthIncr = _healthIncr;
         }
+        
+        string getDescription()
+        {
+            return description;
+        }
+        
+        int getMoneyIncr()
+        {
+            return moneryIncr;
+        }
+        
+        int getHealthIncr()
+        {
+            return healthIncr;
+        }
 
     private:
         string description;
