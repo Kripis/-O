@@ -1,18 +1,20 @@
 #include <iostream>
 #include <cstdlib>
 #include <time.h>
+#include <string>
 
 using namespace std;
 
 int main()
 {
-    srand(static_cast<unsigned int>(time(0)));
+    srand(time(NULL));
     int lives = 3;
+    int gold = 100;
     int coordinate_y = 0;
     int coordinate_x = 0;
     string direction;
-    int arrayChooser = rand() % 2;
-    string events[2] {"You find 100 gold", "You get 1 life"};
+    int arrayChooser = (rand() % 4);
+    string events[4] {"You find 100 gold", "You get 1 life", "You found a gemstone, worth 1000", "You are attacked by a troll, you kill him without losing health!"};
 
 
     cout << "Welcome to Dinky Island\n" << endl;
@@ -28,24 +30,28 @@ int main()
             cout << "You went north." << endl;
             coordinate_y++;
             cout << events[arrayChooser] << endl;
+            cout << "Your current position is: " << coordinate_y << "; " << coordinate_x << endl;
         }
         if (direction == "west")
         {
             cout << "You went west." << endl;
             coordinate_x--;
             cout << events[arrayChooser] << endl;
+            cout << "Your current position is: " << coordinate_y << "; " << coordinate_x << endl;
         }
         if (direction == "south")
         {
             cout << "You went south." << endl;
             coordinate_y--;
             cout << events[arrayChooser] << endl;
+            cout << "Your current position is: " << coordinate_y << "; " << coordinate_x << endl;
         }
         if (direction == "east")
         {
             cout << "You went east." << endl;
             coordinate_x++;
             cout << events[arrayChooser] << endl;
+            cout << "Your current position is: " << coordinate_y << "; " << coordinate_x << endl;
         }
     }
 
