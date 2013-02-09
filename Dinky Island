@@ -13,8 +13,7 @@ int main()
     int coordinate_y = 0;
     int coordinate_x = 0;
     string direction;
-    int arrayChooser = (rand() % 4);
-    string events[4] {"You find 100 gold", "You get 1 life", "You found a gemstone, worth 1000", "You are attacked by a troll, you kill him without losing health!"};
+    string events[4] {"You find 100 gold.", "You get 1 life.", "You found a gemstone, worth 1000.", "You are attacked by a troll, you kill him but lose 1 life."};
 
 
     cout << "Welcome to Dinky Island\n" << endl;
@@ -25,33 +24,104 @@ int main()
     {
         cin >> direction;
 
+        int arrayChooser = (rand() % 4);
+        int arrayC = arrayChooser;
+
         if (direction == "north")
         {
-            cout << "You went north." << endl;
+            cout << "You went north.\n" << endl;
             coordinate_y++;
             cout << events[arrayChooser] << endl;
-            cout << "Your current position is: " << coordinate_y << "; " << coordinate_x << endl;
+            cout << "Your lives are: " << lives << " and your gold is: " << gold << endl;
+            cout << "\nYour current position is: " << coordinate_y << "; " << coordinate_x << endl;
+
+        switch (arrayC)
+{
+
+        case 1:
+            gold += 100;
+
+        case 2:
+            lives + 1;
+
+        case 3:
+            gold += 1000;
+
+        case 4:
+            lives =- 1;
+}
         }
         if (direction == "west")
         {
-            cout << "You went west." << endl;
+            cout << "You went west.\n" << endl;
             coordinate_x--;
             cout << events[arrayChooser] << endl;
-            cout << "Your current position is: " << coordinate_y << "; " << coordinate_x << endl;
+            cout << "Your lives are: " << lives << " and your gold is: " << gold << endl;
+            cout << "\nYour current position is: " << coordinate_y << "; " << coordinate_x << endl;
+
+        switch (arrayC)
+{
+
+        case 1:
+            gold += 100;
+
+        case 2:
+            lives + 1;
+
+        case 3:
+            gold += 1000;
+
+        case 4:
+            lives =- 1;
+}
         }
         if (direction == "south")
         {
-            cout << "You went south." << endl;
+            cout << "You went south.\n" << endl;
             coordinate_y--;
             cout << events[arrayChooser] << endl;
-            cout << "Your current position is: " << coordinate_y << "; " << coordinate_x << endl;
+            cout << "Your lives are: " << lives << " and your gold is: " << gold << endl;
+            cout << "\nYour current position is: " << coordinate_y << "; " << coordinate_x << endl;
+
+        switch (arrayC)
+{
+
+        case 1:
+            gold += 100;
+
+        case 2:
+            lives + 1;
+
+        case 3:
+            gold += 1000;
+
+        case 4:
+            lives =- 1;
+}
         }
         if (direction == "east")
         {
-            cout << "You went east." << endl;
+            cout << "You went east.\n" << endl;
             coordinate_x++;
             cout << events[arrayChooser] << endl;
-            cout << "Your current position is: " << coordinate_y << "; " << coordinate_x << endl;
+            cout << "Your lives are: " << lives << " and your gold is: " << gold << endl;
+            cout << "\nYour current position is: " << coordinate_y << "; " << coordinate_x << endl;
+
+        switch (arrayC)
+{
+
+        case 1:
+            gold += 100;
+
+        case 2:
+            lives + 1;
+
+        case 3:
+            gold += 1000;
+
+        case 4:
+            lives =- 1;
+}
         }
     }
 
