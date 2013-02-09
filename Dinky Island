@@ -13,7 +13,11 @@ int main()
     int coordinate_y = 0;
     int coordinate_x = 0;
     string direction;
-    string events[4] {"You find 100 gold.", "You get 1 life.", "You found a gemstone, worth 1000.", "You are attacked by a troll, you kill him but lose 1 life."};
+    
+    string events[0] {"You find 100 gold."};
+    events[1] {"You get 1 life."};
+    events[2] {"You found a gemstone, worth 1000."};
+    events[3] {"You are attacked by a troll, you kill him but lose 1 life."};
 
 
     cout << "Welcome to Dinky Island\n" << endl;
